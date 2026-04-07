@@ -1,13 +1,11 @@
 name: Tax Templates
-description: Pre-designed templates for organizing and filing tax documents and returns.
-  Financial institutions and enterprises use it to streamline operations and manage
-  fiscal responsibilities.
-url: null
+description: Pre-designed templates for organizing and filing tax documents and returns. Financial institutions and enterprises use it to streamline operations and manage fiscal responsibilities.
+url:
 tags:
-- Tax
-- Templates
-- Finance
-- Documentation
+  - Documentation
+  - Finance
+  - Tax
+  - Templates
 created: '2025'
 modified: '2026-03-16'
 apis: []
