@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "tax": "https://github.com/api-evangelist/tax-templates/vocab/",
+    "irs": "https://www.irs.gov/vocab/",
+    "fatca": "https://www.irs.gov/fatca/vocab/",
+    "TaxDocument": "tax:TaxDocument",
+    "documentType": "tax:documentType",
+    "taxYear": "tax:taxYear",
+    "issuer": "tax:issuer",
+    "recipient": "tax:recipient",
+    "FormBox": "tax:FormBox",
+    "boxNumber": "tax:boxNumber",
+    "boxAmount": "tax:boxAmount",
+    "W2": "irs:FormW2",
+    "Form1099NEC": "irs:Form1099NEC",
+    "Form1099INT": "irs:Form1099INT",
+    "Form1099DIV": "irs:Form1099DIV",
+    "FormK1": "irs:FormK1",
+    "FATCA8938": "fatca:Form8938",
+    "FBAR": "fatca:FBAR",
+    "tin": "schema:taxID",
+    "name": "schema:name",
+    "address": "schema:address",
+    "Organization": "schema:Organization",
+    "Person": "schema:Person",
+    "MonetaryAmount": "schema:MonetaryAmount",
+    "currency": "schema:currency",
+    "value": "schema:value"
+  }
+}

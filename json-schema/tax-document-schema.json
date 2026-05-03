@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/tax-templates/schemas/tax-document",
+  "title": "Tax Document",
+  "description": "A structured template for organizing tax documents, financial disclosures, and supporting schedules used in tax filing workflows.",
+  "type": "object",
+  "required": ["document_type", "tax_year"],
+  "properties": {
+    "document_type": {
+      "type": "string",
+      "description": "Type of tax document",
+      "enum": [
+        "W-2", "1099-NEC", "1099-MISC", "1099-INT", "1099-DIV", "1099-B",
+        "1098", "1098-T", "K-1", "Schedule-A", "Schedule-B", "Schedule-C",
+        "Schedule-D", "Schedule-E", "Schedule-SE", "FATCA-8938", "FBAR",
+        "corporate-return", "partnership-return", "trust-return"
+      ]
+    },
+    "tax_year": {
+      "type": "integer",
+      "description": "Tax year this document covers",
+      "minimum": 2000,
+      "maximum": 2100
+    },
+    "issuer": {
+      "$ref": "#/$defs/Entity"
+    },
+    "recipient": {
+      "$ref": "#/$defs/Entity"
+    },
+    "amounts": {
+      "type": "object",
+      "description": "Financial amounts reported on this document",
+      "additionalProperties": {
+        "type": "number",
+        "description": "Box or line item amount"
+      }
+    },
+    "boxes": {
+      "type": "array",
+      "description": "Named box/line items on the form",
+      "items": {
+        "$ref": "#/$defs/FormBox"
+      }
+    },
+    "dates": {
+      "type": "object",
+      "description": "Relevant dates",
+      "properties": {
+        "issue_date": {"type": "string", "format": "date"},
+        "period_start": {"type": "string", "format": "date"},
+        "period_end": {"type": "string", "format": "date"},
+        "due_date": {"type": "string", "format": "date"}
+      }
+    },
+    "corrections": {
+      "type": "object",
+      "description": "Correction information if this is an amended document",
+      "properties": {
+        "is_corrected": {"type": "boolean"},
+        "original_document_id": {"type": "string"},
+        "correction_reason": {"type": "string"}
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "document_id": {"type": "string", "description": "Unique document identifier"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "source_system": {"type": "string", "description": "System that generated this document"},
+        "verified": {"type": "boolean", "description": "Whether amounts have been verified"}
+      }
+    }
+  },
+  "$defs": {
+    "Entity": {
+      "type": "object",
+      "description": "An entity (person or organization) associated with the tax document",
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "description": "Legal name"},
+        "tin": {"type": "string", "description": "Taxpayer identification number"},
+        "tin_type": {
+          "type": "string",
+          "enum": ["SSN", "EIN", "ITIN", "GIIN"],
+          "description": "TIN type"
+        },
+        "address": {
+          "type": "object",
+          "properties": {
+            "street": {"type": "string"},
+            "city": {"type": "string"},
+            "state": {"type": "string"},
+            "zip": {"type": "string"},
+            "country": {"type": "string", "default": "US"}
+          }
+        },
+        "account_number": {"type": "string", "description": "Account number if applicable"}
+      }
+    },
+    "FormBox": {
+      "type": "object",
+      "description": "A numbered box or line item on a tax form",
+      "required": ["box_number", "label"],
+      "properties": {
+        "box_number": {"type": "string", "description": "Box or line number (e.g., '1', '2a', '12a')"},
+        "label": {"type": "string", "description": "Description of the box"},
+        "amount": {"type": "number", "description": "Dollar amount"},
+        "code": {"type": "string", "description": "Code if applicable (e.g., W-2 Box 12 codes)"},
+        "notes": {"type": "string", "description": "Additional notes"}
+      }
+    }
+  }
+}

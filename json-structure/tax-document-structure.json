@@ -1,0 +1,35 @@
+{
+  "name": "Tax Document",
+  "description": "Structure for tax documents covering W-2, 1099, K-1, FATCA, and other IRS forms used in enterprise tax filing",
+  "fields": [
+    {"name": "document_type", "type": "string", "required": true, "description": "Form type: W-2, 1099-NEC, 1099-INT, K-1, etc."},
+    {"name": "tax_year", "type": "integer", "required": true, "description": "Tax year covered by the document"},
+    {"name": "issuer", "type": "Entity", "required": false, "description": "Entity issuing the document (employer, payer, partnership)"},
+    {"name": "recipient", "type": "Entity", "required": false, "description": "Individual or entity receiving the document"},
+    {"name": "amounts", "type": "object", "required": false, "description": "Key-value map of box names to dollar amounts"},
+    {"name": "boxes", "type": "array<FormBox>", "required": false, "description": "Structured list of named form boxes"},
+    {"name": "dates", "type": "DateSection", "required": false, "description": "Issue date, period, and due dates"},
+    {"name": "corrections", "type": "CorrectionInfo", "required": false, "description": "Amendment details if corrected document"},
+    {"name": "metadata", "type": "DocumentMetadata", "required": false, "description": "System metadata and audit info"}
+  ],
+  "nested": {
+    "Entity": {
+      "fields": [
+        {"name": "name", "type": "string", "description": "Legal entity name"},
+        {"name": "tin", "type": "string", "description": "Taxpayer ID (SSN, EIN, ITIN, GIIN)"},
+        {"name": "tin_type", "type": "string", "description": "SSN, EIN, ITIN, or GIIN"},
+        {"name": "address", "type": "Address", "description": "Mailing address"},
+        {"name": "account_number", "type": "string", "description": "Account number if applicable"}
+      ]
+    },
+    "FormBox": {
+      "fields": [
+        {"name": "box_number", "type": "string", "description": "Box or line number on the form"},
+        {"name": "label", "type": "string", "description": "Box description"},
+        {"name": "amount", "type": "number", "description": "Dollar amount"},
+        {"name": "code", "type": "string", "description": "Form-specific code (e.g., W-2 Box 12 code)"},
+        {"name": "notes", "type": "string", "description": "Optional notes"}
+      ]
+    }
+  }
+}

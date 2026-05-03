@@ -1,0 +1,80 @@
+name: Tax Templates Vocabulary
+description: Domain vocabulary for tax document templates, financial disclosures, and enterprise tax filing workflows across US federal, state, and international jurisdictions.
+url: https://www.irs.gov/
+version: "1.0"
+created: "2026-05-03"
+modified: "2026-05-03"
+tags:
+  - Documentation
+  - Finance
+  - Tax
+  - Templates
+terms:
+  - term: W-2
+    definition: "IRS Form W-2 (Wage and Tax Statement). Annual form employers file with the SSA and provide to employees, reporting wages paid and all taxes withheld during the calendar year."
+    type: form
+    domain: Employment Tax
+  - term: 1099-NEC
+    definition: "IRS Form 1099-NEC (Nonemployee Compensation). Issued to freelancers, contractors, and other non-employees receiving $600+ in compensation during the tax year."
+    type: form
+    domain: Information Reporting
+  - term: 1099-INT
+    definition: "IRS Form 1099-INT (Interest Income). Issued by banks and financial institutions reporting interest earned on accounts exceeding $10 during the year."
+    type: form
+    domain: Information Reporting
+  - term: 1099-DIV
+    definition: "IRS Form 1099-DIV (Dividends and Distributions). Issued by companies and mutual funds reporting dividend payments made to shareholders."
+    type: form
+    domain: Information Reporting
+  - term: 1099-B
+    definition: "IRS Form 1099-B (Proceeds from Broker and Barter Exchange Transactions). Reports sales of securities and other assets to allow calculation of capital gains."
+    type: form
+    domain: Information Reporting
+  - term: Schedule K-1
+    definition: "IRS Schedule K-1. Reports a partner's, shareholder's, or beneficiary's share of income, deductions, and credits from a partnership, S corporation, or trust."
+    type: form
+    domain: Pass-Through Tax
+  - term: FATCA
+    definition: "Foreign Account Tax Compliance Act. US law requiring foreign financial institutions to report information about accounts held by US persons to the IRS. Implemented via Form 8938 and GIIN registration."
+    type: regulation
+    domain: International Tax
+  - term: FBAR
+    definition: "FinCEN Form 114 (Report of Foreign Bank and Financial Accounts). US persons with foreign financial accounts exceeding $10,000 at any point must file annually with FinCEN."
+    type: form
+    domain: International Tax
+  - term: CRS
+    definition: "Common Reporting Standard. OECD framework for automatic exchange of financial account information between tax authorities across 100+ countries, parallel to FATCA."
+    type: regulation
+    domain: International Tax
+  - term: GIIN
+    definition: "Global Intermediary Identification Number. A 19-character identifier assigned to foreign financial institutions that register under FATCA."
+    type: identifier
+    domain: International Tax
+  - term: Box 12 Codes
+    definition: "Codes used on IRS Form W-2 Box 12 to identify different types of compensation and benefits, including D (401k deferrals), C (taxable group life insurance), G (457 deferrals)."
+    type: coding
+    domain: Employment Tax
+  - term: 1098
+    definition: "IRS Form 1098 (Mortgage Interest Statement). Issued by mortgage lenders reporting mortgage interest paid by a borrower for potential itemized deduction."
+    type: form
+    domain: Deductions
+  - term: 1098-T
+    definition: "IRS Form 1098-T (Tuition Statement). Issued by eligible educational institutions reporting tuition payments, enabling American Opportunity and Lifetime Learning credits."
+    type: form
+    domain: Education Credits
+  - term: Schedule C
+    definition: "IRS Schedule C (Profit or Loss from Business). Filed by sole proprietors to report self-employment income, deductions, and net profit or loss."
+    type: form
+    domain: Self-Employment
+  - term: Schedule SE
+    definition: "IRS Schedule SE (Self-Employment Tax). Calculates the self-employment tax owed on net earnings from self-employment, which covers both the employee and employer portions of Social Security and Medicare."
+    type: form
+    domain: Self-Employment
+  - term: Corrected Return
+    definition: "An amended version of a previously filed information return (W-2, 1099, etc.) to correct errors. Marked with a checkmark or 'CORRECTED' designation."
+    type: concept
+    domain: Filing Corrections
+  - term: TIN Matching
+    definition: "IRS process allowing payers to verify that a payee's name and TIN match IRS records before filing information returns, reducing backup withholding risk."
+    type: process
+    domain: Compliance
