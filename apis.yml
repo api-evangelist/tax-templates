@@ -98,7 +98,7 @@ common:
     url: json-schema/tax-document-schema.json
   - type: JSON Structure
     url: json-structure/tax-document-structure.json
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/tax-templates-context.jsonld
   - type: Vocabulary
     url: vocabulary/tax-templates-vocabulary.yml
