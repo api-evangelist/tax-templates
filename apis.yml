@@ -21,7 +21,7 @@ apis:
       - Finance
       - Tax
       - Tax Preparation
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.intuit.com
     humanURL: https://developer.intuit.com/
     properties:
@@ -36,7 +36,7 @@ apis:
       - Finance
       - Tax
       - Tax Preparation
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.hrblock.com/tax-center/filing/e-file/
     properties:
       - url: https://www.hrblock.com/tax-center/filing/e-file/
@@ -50,7 +50,7 @@ apis:
       - Accounting
       - Finance
       - Tax
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.xero.com
     humanURL: https://developer.xero.com/documentation/xero-app-store/app-partner-guides/tax/
     properties:
@@ -65,7 +65,7 @@ apis:
       - Accounting
       - Finance
       - Tax
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://sandbox-quickbooks.api.intuit.com/v3
     humanURL: https://developer.intuit.com/app/developer/qbo/docs/develop
     properties:
@@ -82,7 +82,7 @@ apis:
       - FATCA
       - Finance
       - International Tax
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.irs.gov/businesses/corporations/foreign-account-tax-compliance-act-fatca
     properties:
       - url: https://www.irs.gov/businesses/corporations/foreign-account-tax-compliance-act-fatca
