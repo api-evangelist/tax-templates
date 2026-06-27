@@ -94,9 +94,9 @@ apis:
 common:
   - type: Website
     url: https://www.irs.gov/
-  - type: JSON Schema
+  - type: JSONSchema
     url: json-schema/tax-document-schema.json
-  - type: JSON Structure
+  - type: JSONStructure
     url: json-structure/tax-document-structure.json
   - type: JSONLD
     url: json-ld/tax-templates-context.jsonld
