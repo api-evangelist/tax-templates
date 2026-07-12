@@ -92,6 +92,8 @@ apis:
       templates for financial institutions reporting foreign account holders to the IRS
       and international tax authorities.
 common:
+  - type: DomainSecurity
+    url: security/tax-templates-domain-security.yml
   - type: Website
     url: https://www.irs.gov/
   - type: JSONSchema
