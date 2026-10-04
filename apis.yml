@@ -24,6 +24,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tax-templates.png
 name: Tax Templates
+kind: topic
 description: >-
   Pre-designed templates for organizing and filing tax documents and returns. Financial
   institutions and enterprises use these templates to streamline tax operations and
@@ -129,3 +130,4 @@ common:
     url: json-ld/tax-templates-context.jsonld
   - type: Vocabulary
     url: vocabulary/tax-templates-vocabulary.yml
+x-type: concept
