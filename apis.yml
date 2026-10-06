@@ -39,7 +39,7 @@ tags:
   - Templates
   - Compliance
 created: '2025'
-modified: '2026-05-03'
+modified: '2026-10-06'
 apis:
   - aid: tax-templates:turbotax-api
     name: TurboTax API
@@ -118,6 +118,8 @@ apis:
       templates for financial institutions reporting foreign account holders to the IRS
       and international tax authorities.
 common:
+  - url: https://www.irs.gov/newsroom
+    type: Blog
   - type: DomainSecurity
     url: security/tax-templates-domain-security.yml
   - type: Website
