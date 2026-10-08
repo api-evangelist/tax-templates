@@ -118,6 +118,12 @@ apis:
       templates for financial institutions reporting foreign account holders to the IRS
       and international tax authorities.
 common:
+  - type: Plans
+    url: plans/tax-templates-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/tax-templates-rate-limits.yml
+  - type: FinOps
+    url: finops/tax-templates-finops.yml
   - url: https://www.irs.gov/newsroom
     type: Blog
   - type: DomainSecurity
